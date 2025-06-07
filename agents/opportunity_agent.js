@@ -1,7 +1,10 @@
-export async function run(memoryKV, input) {
-    // Example: static opportunity or dynamic
-    const opportunity = "Explore AGI Engine X v1.7 Opportunities 🚀";
-    await memoryKV.put("last_opportunity", opportunity);
+export async function run(memoryKV, input = {}) {
+    const result = "Opportunity after INIT";
+    await memoryKV.put("last_opportunity", result);
+    return result;
+}
+
+export async function getOpportunity(memoryKV) {
     const lastOpportunity = await memoryKV.get("last_opportunity");
-    return lastOpportunity;
+    return lastOpportunity || "Opportunity INIT";
 }
