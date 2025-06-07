@@ -1,6 +1,10 @@
-export async function run(memoryKV, input) {
-    // Example: store and retrieve last move
-    await memoryKV.put("last_move", "NextMove after INIT");
-    const lastMove = await memoryKV.get("last_move");
-    return lastMove;
+export async function run(memoryKV, input = {}) {
+    const result = "NextMove after INIT";
+    await memoryKV.put("last_next_move", result);
+    return result;
+}
+
+export async function getNextMove(memoryKV) {
+    const lastMove = await memoryKV.get("last_next_move");
+    return lastMove || "NextMove INIT";
 }
