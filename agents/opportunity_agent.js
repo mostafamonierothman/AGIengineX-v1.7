@@ -1,15 +1,7 @@
-// agents/opportunity_agent.js
-
-export async function getOpportunity(memoryKV) {
-  // Example: Dummy opportunity
-  const opportunity = `Opportunity at ${new Date().toISOString()}`;
-
-  // Save to memory
-  await memoryKV.put("last_opportunity", opportunity);
-
-  return opportunity;
-}
-
-export async function run(memoryKV, input = {}) {
-  return await getOpportunity(memoryKV);
+export async function run(memoryKV, input) {
+    // Example: static opportunity or dynamic
+    const opportunity = "Explore AGI Engine X v1.7 Opportunities 🚀";
+    await memoryKV.put("last_opportunity", opportunity);
+    const lastOpportunity = await memoryKV.get("last_opportunity");
+    return lastOpportunity;
 }
