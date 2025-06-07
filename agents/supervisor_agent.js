@@ -1,12 +1,7 @@
-// agents/supervisor_agent.js
-
-export async function run(memoryKV, input = {}) {
-  // Example: Perform reflection & log
-  const reflection = `Reflection at ${new Date().toISOString()}`;
-  await memoryKV.put("last_reflection", reflection);
-
-  return {
-    reflection,
-    notes: "Supervisor checked system. All looks good.",
-  };
+export async function run(memoryKV, input) {
+    // Example: supervisor action
+    const status = `Supervisor checked at ${new Date().toISOString()}`;
+    await memoryKV.put("last_supervisor_check", status);
+    const lastCheck = await memoryKV.get("last_supervisor_check");
+    return lastCheck;
 }
