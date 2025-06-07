@@ -7,9 +7,7 @@
   "scripts": {
     "deploy": "wrangler deploy"
   },
-  "dependencies": {
-    // No dependencies needed — Workers native!
-  },
+  "dependencies": {},
   "devDependencies": {},
   "keywords": [
     "AGI",
