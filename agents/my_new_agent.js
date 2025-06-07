@@ -1,7 +1,7 @@
-export async function run(memoryKV, input) {
-    // Example: echo input back
-    const response = `Hello from My New Agent 🚀 — input: ${JSON.stringify(input)}`;
-    await memoryKV.put("last_my_new_agent", response);
-    const lastResponse = await memoryKV.get("last_my_new_agent");
-    return lastResponse;
+export async function run(memoryKV, input = {}) {
+    const customAction = input.action || "Default Action";
+    const result = `Custom agent executed: ${customAction}`;
+
+    await memoryKV.put("last_custom_action", result);
+    return result;
 }
