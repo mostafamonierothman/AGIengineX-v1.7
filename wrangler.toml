@@ -1,16 +1,11 @@
-# wrangler.toml
-# AGIengineX-v1.7 ONE STEP FULL 🚀
-
 name = "agienginex-v1-7"
 main = "main_worker.js"
-compatibility_date = "2024-06-01"
+compatibility_date = "2025-06-07"
+compatibility_flags = []
 
-# KV binding for memory
 [[kv_namespaces]]
 binding = "MEMORY_KV"
-id = "YOUR_KV_NAMESPACE_ID" # will be auto-created by Wrangler if you use wrangler.toml with `wrangler kv:namespace create MEMORY_KV`
+id = "6cf28c1062ce4684a783c4db0dd7b6b2"
 
-# Environment variables (secrets go here in Cloudflare)
 [vars]
-OPENAI_API_KEY = ""
-API_TOKEN = ""
+# You do NOT need to define OPENAI_API_KEY or API_TOKEN here — they are set via wrangler secret put
