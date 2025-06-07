@@ -1,5 +1,0 @@
-export async function run(input) {
-  return {
-    result: `Hello from My New Agent 🚀 — input: ${JSON.stringify(input)}`
-  };
-}
