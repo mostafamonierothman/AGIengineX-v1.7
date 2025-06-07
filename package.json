@@ -1,0 +1,22 @@
+{
+  "name": "agienginex-v1-7",
+  "version": "1.0.0",
+  "description": "AGIengineX-v1.7 ONE STEP FULL 🚀",
+  "main": "main_worker.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    // No dependencies needed — Workers native!
+  },
+  "devDependencies": {},
+  "keywords": [
+    "AGI",
+    "Cloudflare Workers",
+    "ONE STEP",
+    "AGIengineX"
+  ],
+  "author": "Mostafa Monier Othman",
+  "license": "MIT"
+}
